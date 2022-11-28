@@ -290,8 +290,8 @@ async function Editly(config = {}) {
 
             "-f",
             "rawvideo",
-            "-vcodec",
-            "rawvideo",
+            // "-vcodec",
+            // "rawvideo",
             "-pix_fmt",
             "rgba",
             "-s",
@@ -300,14 +300,14 @@ async function Editly(config = {}) {
             framerateStr,
 
             // //
-            // "-vcodec",
-            // "hevc_vaapi",
-            // "-hwaccel",
-            // "vaapi",
-            // "-hwaccel_output_format",
-            // "vaapi",
-            // "-hwaccel_device",
-            // "/dev/dri/renderD128",
+            "-vcodec",
+            "hevc_vaapi",
+            "-hwaccel",
+            "vaapi",
+            "-hwaccel_output_format",
+            "vaapi",
+            "-hwaccel_device",
+            "/dev/dri/renderD128",
             // //
 
             "-i",
