@@ -50,7 +50,7 @@ async function Editly(config = {}) {
         audioNorm,
         outputVolume,
         customOutputArgs,
-
+        customInputArgs,
         ffmpegPath = "ffmpeg",
         ffprobePath = "ffprobe",
     } = config;
@@ -299,15 +299,16 @@ async function Editly(config = {}) {
             "-r",
             framerateStr,
 
+            ...customInputArgs,
             // //
             // "-vcodec",
             // "hevc_vaapi",
-            "-hwaccel",
-            "vaapi",
-            "-hwaccel_output_format",
-            "vaapi",
-            "-hwaccel_device",
-            "/dev/dri/renderD128",
+            // "-hwaccel",
+            // "vaapi",
+            // "-hwaccel_output_format",
+            // "vaapi",
+            // "-hwaccel_device",
+            // "/dev/dri/renderD128",
             // //
 
             "-i",
